@@ -7,7 +7,8 @@ html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form
   padding: 0; }
 
 h1, h2, h3, h4, h5, h6, em {
-  font-weight: normal; }
+  font-weight: normal;
+  line-height: 1.2em; }
 
 html {
   height: 100%; }
@@ -223,4 +224,6 @@ a, .m-title img, .img img, .fancybox img, img.nofancybox {
   .m-pager a, .m-pager span {
     padding: 16px; }
   .g-ft {
-    margin: 40px 0 0; } }
+    margin: 40px 0 0; }
+  .m-post h1 {
+    font-size: 1.8rem; } }
