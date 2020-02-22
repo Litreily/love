@@ -14,8 +14,8 @@ $.ajax({
         custom = [{
             name: 'zcz-月亮代表我的心',
             artist: '张陈增',
-            url: 'http://storage.live.com/items/3D70E52B449B0AAC!4635:/zcz-月亮代表我的心.mp3',
-            cover: 'http://storage.live.com/items/3D70E52B449B0AAC!4636:/zcz.jpg',
+            url: 'http://storage.live.com/items/3D70E52B449B0AAC!4635:/zcz-月亮代表我的心.mp3?authkey=AEGb_w5cA14AQto',
+            cover: 'http://storage.live.com/items/3D70E52B449B0AAC!4636:/zcz.jpg?authkey=AEGb_w5cA14AQto',
             theme: '#ebd0c2'
         }]
         ap.list.add(custom.concat(JSON.parse(list)))
