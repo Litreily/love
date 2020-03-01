@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Simple Love</title>
+    <link rel="Shortcut Icon" href="/favicon.jpg" type="image/x-icon">
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+            background-image: url('/assets/bg/bg.jpg');
+            background-repeat: no-repeat;
+            background-position: top;
+            /* background-size: cover; */
+            font-size: 85%;
+            margin: 0;
+        }
+        
+        h2 {
+            font-size: 220%;
+            font-weight: 400;
+        }
+        
+        .content {
+            position: absolute;
+            width: 100%;
+            top: 40%;
+            transform: translate(0, -50%);
+            text-align: center;
+        }
+        
+        .timer {
+            font-size: 180%;
+            line-height: 1.5;
+            margin: 1em 0;
+        }
+        
+        .timer b {
+            font-size: 200%;
+            color: rgb(253, 99, 125);
+        }
+
+        a {
+            text-decoration: unset;
+            color: black;
+        }
+
+        @media screen and (max-width: 500px) {
+            body {
+                background-image: url('/assets/bg/bg1.jpg');
+                background-size: 115%;
+            }
+            h2 {
+                font-size: 150%;
+            }
+            .timer {
+                font-size: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h2>增增，我的<a href="./bonus.html">宝宝</a>，我们已经相识了</h2>
+        <div class="timer">
+            <b id="d1"></b> Days <b id="h1"></b> Hours <b id="m1"></b> Minutes <b id="s1"></b> Seconds
+        </div>
+        <h2>相恋了</h2>
+        <div class="timer">
+            <b id="d2"></b> Days <b id="h2"></b> Hours <b id="m2"></b> Minutes <b id="s2"></b> Seconds
+        </div>
+    </div>
+
+    <script>
+        function setTime(t, id) {
+            var h = ~~(t / 1000 / 60 / 60 % 24);
+            if (h < 10) {
+                h = "0" + h;
+            }
+            var m = ~~(t / 1000 / 60 % 60);
+            if (m < 10) {
+                m = "0" + m;
+            }
+
+            var s = ~~(t / 1000 % 60);
+            if (s < 10) {
+                s = "0" + s;
+            }
+            document.getElementById('d' + id).innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+            document.getElementById('h' + id).innerHTML = h;
+            document.getElementById('m' + id).innerHTML = m;
+            document.getElementById('s' + id).innerHTML = s;
+        }
+        function timer() {
+            var hello = new Date(2015, 8, 20, 21, 48); // 2015.09.20 21:48
+            var love = new Date(2019, 8, 14, 13, 06, 30); // 2019.09.14 13:06
+            var t_know = new Date() - hello;
+            var t_love = new Date() - love;
+            setTime(t_know, 1)
+            setTime(t_love, 2)
+        }
+        timer();
+        setInterval(timer, 1000);
+    </script>
+</body>
+
+</html>
