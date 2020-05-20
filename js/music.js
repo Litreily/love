@@ -18,6 +18,6 @@ $.ajax({
             cover: 'http://storage.live.com/items/3D70E52B449B0AAC!4636:/zcz.jpg',
             theme: '#ebd0c2'
         }]
-        ap.list.add(custom.concat(JSON.parse(list)))
+        ap.list.add(custom.concat(list))
     }
 });
