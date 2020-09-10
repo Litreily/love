@@ -93,3 +93,17 @@
         column-gap: 1em;
     }
 }
+
+@media print,
+screen and (max-width: 720px) {
+    .gallery-wrapper .gallery-box {
+        width: 50%;
+    }
+}
+
+@media print,
+screen and (max-width: 540px) {
+    .gallery-wrapper .gallery-box {
+        width: 100%;
+    }
+}
