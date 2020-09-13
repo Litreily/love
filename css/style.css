@@ -65,7 +65,7 @@ nav .search-popup {
 
 header .m-title img {
   border-radius: 100%;
-  vertiacl-align: middle; }
+  vertical-align: middle; }
 
 header .m-title h1 {
   margin: 30px 0 0; }
@@ -166,6 +166,65 @@ a, .m-title img, .img img, .fancybox img, img.nofancybox {
   zoom: 1;
   font-size: 12px;
   line-height: 1em; }
+
+/*----------------------*/
+/* Letter               */
+/*----------------------*/
+#letter li {
+  position: relative; }
+  #letter li .l-author, #letter li .l-info {
+    display: inline-block; }
+  #letter li .l-author {
+    position: relative;
+    padding: 16px;
+    left: calc(50% - 21px);
+    margin-bottom: 60px; }
+  #letter li .l-info {
+    position: absolute;
+    top: 7px; }
+    #letter li .l-info .date {
+      display: block; }
+    #letter li .l-info .path {
+      border-bottom: dotted 1px; }
+  #letter li .l-author::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    transform: rotate(45deg);
+    border: solid 1px lightblue;
+    top: 8px;
+    left: 2px; }
+  #letter li .l-author:hover {
+    transition: 0.9s;
+    transform: rotatey(360deg); }
+
+#letter li:not(:last-child) .l-author::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 55px;
+  width: 2px;
+  border-radius: 2px;
+  background: pink;
+  top: 60px;
+  left: 22px; }
+
+#letter li.female {
+  color: purple; }
+  #letter li.female .l-info {
+    left: calc(50% + 48px); }
+  #letter li.female .l-author::before {
+    background: rgba(255, 255, 255, 0.4); }
+
+#letter li.male {
+  color: darkblue !important; }
+  #letter li.male .l-info {
+    right: calc(50% + 48px);
+    text-align: right; }
+  #letter li.male .l-author::before {
+    background: rgba(255, 192, 203, 0.4); }
 
 /*----------------------*/
 /* Footer               */
