@@ -183,7 +183,8 @@ a, .m-title img, .img img, .fancybox img, img.nofancybox {
     position: absolute;
     top: 7px; }
     #letter li .l-info .date {
-      display: block; }
+      display: block;
+      font-size: smaller; }
     #letter li .l-info .path {
       border-bottom: dotted 1px; }
   #letter li .l-author::before {
